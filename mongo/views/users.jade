@@ -1,0 +1,29 @@
+extends layout
+
+block scripts
+
+block content
+  .jumbotron
+    h1 Users
+  .row(ng-controller='userController')
+    .col-xs-12
+      table.table.table-striped
+        thead
+          tr
+            th(ng-repeat='key in cols') {{ key }}
+            th editor
+          tr
+            td(ng-repeat='key in cols')
+              input.form-control(ng-model='newUser[key]')
+            td
+              button.btn.btn-primary(ng-click='addUser(newUser)') add
+        tbody
+          tr(ng-repeat='row in tableData')
+            td(ng-repeat='key in cols') 
+              input.form-control(ng-model='row[key]')
+            td 
+              .btn-group
+                button.btn.btn-info(ng-click='updateRow(row)')
+                  span.glyphicon.glyphicon-pencil
+                button.btn.btn-danger(ng-click='deleteRow(row)')
+                  span.glyphicon.glyphicon-trash

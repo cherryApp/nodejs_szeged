@@ -1,0 +1,19 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "test package",
+  "main": "server.js",
+  "dependencies": {
+    "express": "4.15.2",
+    "grunt": "^1.0.1",
+    "lodash": "4.17.4",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "j.cserko@gmail.com",
+  "license": "MIT"
+}

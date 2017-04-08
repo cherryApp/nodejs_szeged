@@ -1,0 +1,8 @@
+{
+    "uid": "mongo",
+    "append": true,
+    "watch": true,
+    "script": "./bin/www",
+    "minUptime": 1000,
+    "spinSleepTime": 1000
+}

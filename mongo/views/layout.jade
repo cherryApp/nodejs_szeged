@@ -1,0 +1,27 @@
+doctype html
+html(ng-app='mongo')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.min.css')
+  body
+    .container
+      .header.clearfix
+        nav
+          ul.nav.nav-pills.pull-right
+            li(role='presentation', class=url=='/' ? 'active' : '')
+              a(href='/') Home
+            li(role='presentation', class=url=='/users' ? 'active' : '')
+              a(href='/users') Users
+            li(role='presentation', class=url=='/products' ? 'active' : '')
+              a(href='/products') Products
+            li(role='presentation', class=url=='/orders' ? 'active' : '')
+              a(href='/orders') Orders
+        h3.text-muted= title
+      block content
+
+    script(src='/lib/jquery.min.js')
+    script(src='/lib/bootstrap/js/bootstrap.min.js')
+    script(src='/lib/angular.min.js')
+    script(src='/js/app.js')
+    block scripts
